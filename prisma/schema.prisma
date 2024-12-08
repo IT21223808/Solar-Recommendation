@@ -1,0 +1,26 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("MongoDbUrl")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Location {
+  id               String @id @default(auto()) @map("_id") @db.ObjectId
+  name             String
+  allowed_capacity Int
+}
+
+model recommendationModel {
+  id              String @id @default(auto()) @map("_id") @db.ObjectId
+  location        String
+  landSize        Float
+  allowedCapacity Float
+  avgEfficiency   Float
+  avgPrice        Float
+  finalPrice      Float?
+  predictedPanels Int
+  panelsFitInLand Int
+}

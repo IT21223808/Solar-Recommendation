@@ -5,7 +5,7 @@ This project aims to develop a solar recommendation system that can help users f
 - Python 3.8 or higher
 - Node.js 14 or higher
 - Pandas
-
+- Joblib
 - Openpyxl
 - Scikit-learn
 - Flask
